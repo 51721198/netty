@@ -52,6 +52,16 @@
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
     </dependency>
+      <dependency>
+          <groupId>repository.io.netty</groupId>
+          <artifactId>netty-all</artifactId>
+          <version>5.0.0.Alpha2</version>
+      </dependency>
+    <dependency>
+      <groupId>repository.io.netty</groupId>
+      <artifactId>netty-all</artifactId>
+      <version>4.1.4.Final</version>
+    </dependency>
   </dependencies>
 </project>
 

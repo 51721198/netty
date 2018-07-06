@@ -53,8 +53,8 @@ public final class EchoServer {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup, workerGroup)
-             .channel(NioServerSocketChannel.class)
+            b.group(bossGroup, workerGroup)                   //只是设定好两个group
+             .channel(NioServerSocketChannel.class)             //只返回一个channelFactory工厂,不会对channel进行初始化
              .option(ChannelOption.SO_BACKLOG, 100)
              .handler(new LoggingHandler(LogLevel.INFO))
              .childHandler(new ChannelInitializer<SocketChannel>() {

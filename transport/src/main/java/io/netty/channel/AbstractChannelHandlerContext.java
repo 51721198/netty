@@ -524,6 +524,7 @@ abstract class AbstractChannelHandlerContext extends DefaultAttributeMap
             return promise;
         }
 
+        //建立连接核心代码,会循环遍历handler,直到找到一个outboundhandler,然后调用其connect方法
         final AbstractChannelHandlerContext next = findContextOutbound();
         EventExecutor executor = next.executor();
         if (executor.inEventLoop()) {
